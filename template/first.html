@@ -1,1 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zeus is sus-picious</title>
+</head>
+<body>
+    <h1>It's me Jason Grace</h1>
+    <form method="POST" action="{{ url_for('index') }}">
+        <input type="text" name="username" placeholder="Username"><br>
+        <input type="text" name="password" placeholder="Password"><br>
+        <input type="submit" value="Login">
+    </form>
 
+    <h1>File Upload</h1>
+    <form method="POST" action="{{ url_for('file_upload') }}" enctype="multipart/form-data">
+        <input type="file" name="file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel, text/plain, text/csv" required="required">
+        <input type="submit" value="Upload File">
+    </form>
+
+    <h1>Convert to Excel</h1>
+    <form method="POST" action="{{ url_for('convert_excel') }}" enctype="multipart/form-data">
+        <input type="file" name="file2" accept="text/csv" required="required">
+        <input type="submit" value="Convert File">
+    </form>
+</body>
+</html>
